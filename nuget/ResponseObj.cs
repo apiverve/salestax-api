@@ -52,6 +52,9 @@ namespace APIVerve.API.SalesTaxLookup
 
         [JsonProperty("special")]
         public double? Special { get; set; }
+
+        [JsonProperty("stateRate")]
+        public double? StateRate { get; set; }
     }
 
     public partial class Premium
