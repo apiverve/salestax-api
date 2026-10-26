@@ -25,13 +25,14 @@ declare module '@apiverve/salestax' {
 
 
   interface SalesTaxLookupData {
-      state:   null | string;
-      zip:     number | null;
-      region:  null | string;
-      rate:    number | null;
-      county:  number | null;
-      city:    number | null;
-      special: number | null;
+      state:     null | string;
+      zip:       number | null;
+      region:    null | string;
+      rate:      number | null;
+      county:    number | null;
+      city:      number | null;
+      special:   number | null;
+      stateRate: number | null;
   }
 
   export default class salestaxWrapper {
