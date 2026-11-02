@@ -24,7 +24,7 @@ class ValidationError(SalestaxAPIClientError):
 class SalestaxAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "zip": {"type": "string", "required": True, "minLength": 5, "maxLength": 5}
+        "zip": {"type": "string", "required": True, "minLength": 5, "maxLength": 10}
     }
 
     # Format validation patterns
