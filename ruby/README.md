@@ -1,6 +1,6 @@
 # Sales Tax Lookup API - Ruby Gem
 
-Sales Tax Lookup is a US sales tax API that finds current sales tax rates for any US ZIP code or two-letter state abbreviation. It returns the jurisdiction state code and the estimated combined tax rate.
+Sales Tax Lookup is a US sales tax rate API: send a ZIP or ZIP+4 code or a two-letter state code and get the current combined sales tax rate, city and state back as JSON. Paid plans add the state, county, city and special district rates that make it up, and whether the state taxes at origin or destination.
 
 ## Installation
 
@@ -79,7 +79,11 @@ client = APIVerve::Salestax::Client.new(
     "rate": 0.1025,
     "county": 0.0025,
     "city": 0.0075,
-    "special": 0.0325
+    "special": 0.0325,
+    "stateRate": 0.06,
+    "cityName": "Beverly Hills",
+    "stateName": "California",
+    "sourcing": "mixed"
   }
 }
 ```

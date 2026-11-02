@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'zip' => { type: 'string', required: true, min_length: 5, max_length: 5 } }
+      VALIDATION_RULES = { 'zip' => { type: 'string', required: true, min_length: 5, max_length: 10 } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
