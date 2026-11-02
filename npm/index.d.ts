@@ -33,6 +33,9 @@ declare module '@apiverve/salestax' {
       city:      number | null;
       special:   number | null;
       stateRate: number | null;
+      cityName:  null | string;
+      stateName: null | string;
+      sourcing:  null | string;
   }
 
   export default class salestaxWrapper {
