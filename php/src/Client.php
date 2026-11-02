@@ -34,7 +34,7 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'zip' => ['type' => 'string', 'required' => true, 'minLength' => 5, 'maxLength' => 5]
+        'zip' => ['type' => 'string', 'required' => true, 'minLength' => 5, 'maxLength' => 10]
     ];
 
     /**
