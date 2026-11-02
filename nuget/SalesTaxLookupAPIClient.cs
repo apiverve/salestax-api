@@ -67,7 +67,7 @@ namespace APIVerve.API.SalesTaxLookup
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "zip", new ValidationRule { Type = "string", Required = true, MinLength = 5, MaxLength = 5 } }
+            { "zip", new ValidationRule { Type = "string", Required = true, MinLength = 5, MaxLength = 10 } }
         };
 
         /// <summary>Format validation patterns</summary>

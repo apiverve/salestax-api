@@ -1,7 +1,7 @@
 Sales Tax Lookup API
 ============
 
-Sales Tax Lookup is a US sales tax rate API: send a five-digit ZIP code or a two-letter state code and get the current combined sales tax rate back as JSON. The Free plan returns the state and the combined rate; paid plans add the state, county, city and special district rates that make it up.
+Sales Tax Lookup is a US sales tax rate API: send a ZIP or ZIP+4 code or a two-letter state code and get the current combined sales tax rate, city and state back as JSON. Paid plans add the state, county, city and special district rates that make it up, and whether the state taxes at origin or destination.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.SalesTaxLookup.svg)](https://www.nuget.org/packages/APIVerve.API.SalesTaxLookup)
@@ -373,7 +373,10 @@ using (var apiClient = new SalesTaxLookupAPIClient("[YOUR_API_KEY]"))
     "county": 0.0025,
     "city": 0.0075,
     "special": 0.0325,
-    "stateRate": 0.06
+    "stateRate": 0.06,
+    "cityName": "Beverly Hills",
+    "stateName": "California",
+    "sourcing": "mixed"
   }
 }
 ```
