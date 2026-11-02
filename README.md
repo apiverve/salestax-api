@@ -1,6 +1,6 @@
 # [Sales Tax Lookup API](https://apiverve.com/marketplace/salestax?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Sales Tax Lookup is a US sales tax rate API: send a five-digit ZIP code or a two-letter state code and get the current combined sales tax rate back as JSON. The Free plan returns the state and the combined rate; paid plans add the state, county, city and special district rates that make it up.
+Sales Tax Lookup is a US sales tax rate API: send a ZIP or ZIP+4 code or a two-letter state code and get the current combined sales tax rate, city and state back as JSON. Paid plans add the state, county, city and special district rates that make it up, and whether the state taxes at origin or destination.
 
 The Sales Tax Lookup API provides a simple, reliable way to integrate sales tax lookup functionality into your applications. Built for developers who need production-ready sales tax lookup capabilities without the complexity of building from scratch.
 
@@ -218,7 +218,10 @@ A real response from the Sales Tax Lookup API:
     "county": 0.0025,
     "city": 0.0075,
     "special": 0.0325,
-    "stateRate": 0.06
+    "stateRate": 0.06,
+    "cityName": "Beverly Hills",
+    "stateName": "California",
+    "sourcing": "mixed"
   }
 }
 ```

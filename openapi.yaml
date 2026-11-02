@@ -2,10 +2,11 @@ openapi: 3.0.4
 info:
   title: Sales Tax Lookup
   description: >-
-    Sales Tax Lookup is a US sales tax rate API: send a five-digit ZIP code or a
-    two-letter state code and get the current combined sales tax rate back as
-    JSON. The Free plan returns the state and the combined rate; paid plans add
-    the state, county, city and special district rates that make it up.
+    Sales Tax Lookup is a US sales tax rate API: send a ZIP or ZIP+4 code or a
+    two-letter state code and get the current combined sales tax rate, city and
+    state back as JSON. Paid plans add the state, county, city and special
+    district rates that make it up, and whether the state taxes at origin or
+    destination.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -29,7 +30,9 @@ paths:
           schema:
             type: string
           required: true
-          description: The zip code for which you want to get the sales tax rate
+          description: >-
+            The zip code for which you want to get the sales tax rate. ZIP+4
+            (64082-1234) is accepted and priced at its 5-digit ZIP
           example: '64082'
       responses:
         '200':
@@ -60,6 +63,9 @@ paths:
                   city: 0.0075
                   special: 0.0325
                   stateRate: 0.06
+                  cityName: Beverly Hills
+                  stateName: California
+                  sourcing: mixed
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
