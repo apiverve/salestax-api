@@ -1,0 +1,16 @@
+name: apiverve_salestax
+description: "Sales Tax Lookup is a US sales tax rate API: send a ZIP or ZIP+4 code or a two-letter state code and get the current combined sales tax rate, city and state back as JSON. Paid plans add the state, county, city and special district rates that make it up, and whether the state taxes at origin or destination."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/salestax?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/salestax-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
